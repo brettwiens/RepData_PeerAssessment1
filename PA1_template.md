@@ -30,7 +30,7 @@ dailySteps <- aggregate(steps ~ date, activityData, sum)
 hist(dailySteps$steps/1000, breaks = 10, xlab = "Steps (000s)", ylab = "Frequency (Days)", main = "Total Steps per Day", border = "blue", col = "cyan", density = 50,labels = TRUE, ylim = c(0,20), xlim = c(0,25))
 ```
 
-![](PA1_template_files/figure-html/Daily Steps-1.png)<!-- -->
+![plot of Daily Steps-1](PA1_template_files/figure-html/Daily Steps-1.png)<!-- -->
 
 ```r
 ## Calculated the mean and median steps per day
