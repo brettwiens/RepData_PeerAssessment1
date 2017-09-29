@@ -30,7 +30,7 @@ dailySteps <- aggregate(steps ~ date, activityData, sum)
 hist(dailySteps$steps/1000, breaks = 10, xlab = "Steps (000s)", ylab = "Frequency (Days)", main = "Total Steps per Day", border = "blue", col = "cyan", density = 50,labels = TRUE, ylim = c(0,20), xlim = c(0,25))
 ```
 
-![plot of Daily Steps-1](PA1_template_files/figure-html/Daily Steps-1.png)<!-- -->
+![Daily Steps](https://github.com/brettwiens/RepData_PeerAssessment1/blob/master/PA1_template_files/figure-html/Daily%20Steps-1.png)<!-- -->
 
 ```r
 ## Calculated the mean and median steps per day
@@ -59,7 +59,7 @@ IntervalPlot = ggplot(averageInterval, mapping = aes(interval, steps))
 IntervalPlot + geom_line() + geom_smooth(method = 'loess', span = 0.2, col = "darkred") + labs(title = "Steps per 5-minute Interval", x = "5-Minute Interval", y = "Steps")
 ```
 
-![](PA1_template_files/figure-html/Time Intervals-1.png)<!-- -->
+![Time Intervals](https://github.com/brettwiens/RepData_PeerAssessment1/blob/master/PA1_template_files/figure-html/Time%20Intervals-1.png)<!-- -->
 
 Generally speaking, the most steps occur in the 167th 5-minute interval, which is the 835th minute in the day.  Or around 13:55:00.
 
@@ -104,7 +104,7 @@ FullDataHistogram <- ggplot(AllDay, mapping = aes(Steps))
 FullDataHistogram + geom_histogram(fill = "darkred", col = "black", binwidth = 500) + labs(title = "Number of Steps Taken per Day", x = "Number of Steps", y = "Frequency (Days)") + theme(panel.background = element_rect(fill = "lightgrey"), plot.background = element_rect(fill = "darkgrey"), title = element_text(colour = "white", face = "bold"))
 ```
 
-![](PA1_template_files/figure-html/Imputing Intervals-1.png)<!-- -->
+![Imputing Intervals](https://github.com/brettwiens/RepData_PeerAssessment1/blob/master/PA1_template_files/figure-html/Imputing%20Intervals-1.png)<!-- -->
 
 It is clear that imputing missing data affects the results of our analysis.  The mean daily steps are 1.0765747\times 10^{4} and the median daily steps are 1.0765\times 10^{4}.  If you recall, that compares to 1.0766189\times 10^{4} and 10765.  Respectively a difference between means of -0.4416594 and medians of 0.
 
@@ -129,4 +129,4 @@ WeekendPlot <- ggplot(CombinedWeek, mapping = aes(Interval, Steps, col = Flag)) 
 WeekendPlot
 ```
 
-![](PA1_template_files/figure-html/Weekdays and Weekends-1.png)<!-- -->
+![Weekdays and Weekends](https://github.com/brettwiens/RepData_PeerAssessment1/blob/master/PA1_template_files/figure-html/Weekdays%20and%20Weekends-1.png)<!-- -->
